@@ -40,7 +40,9 @@
 
     <script>
         function clacularImc() {
+            
             let peso, altura, imc;
+
             altura = document.getElementById("altura").value;
             altura = altura / 100;
             peso = document.getElementById("peso").value;
@@ -50,7 +52,11 @@
             console.log(peso);
             console.log(imc.toFixed(2));
 
-            document.getElementById("resultado").innerHTML = imc.toFixed(2);
+            // função number é para voltar a ser numero
+            // parseFloat transforma de texto em numero
+            imc = Number.parseFloat(imc.toFixed(2));
+
+            document.getElementById("resultado").innerHTML = imc.toLocaleString("pt-BR");
         }
     </script>
 
